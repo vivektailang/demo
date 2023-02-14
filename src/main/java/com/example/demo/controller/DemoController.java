@@ -26,4 +26,9 @@ public class DemoController {
 		
 		return ResponseEntity.ok().body(result);
 	}
+	
+	@RequestMapping(path = "/testhelp",  method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> help() {		
+		return ResponseEntity.ok().body("Help me out!!");
+	}
 }
