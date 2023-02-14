@@ -1,11 +1,6 @@
-FROM temp
-
-ARG DOCKER_VERSION=VERSION
-
-RUN apt-get -y install \
-        docker-ce=${DOCKER_VERSION} \
-        docker-ce-cli=${DOCKER_VERSION} \
-        docker-compose docker-compose-plugin && \
-    apt-get clean
-
-ENTRYPOINT ["/usr/bin/docker"]    
+FROM jdk:11
+VOLUME /tmp
+EXPOSE 7070
+ARG JAR_FILE=targetdemo-0.0.1-SNAPSHOT.jar
+ADD ${JAR_FILE} demo-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/demo-0.0.1-SNAPSHOT.jar"]
