@@ -1,4 +1,4 @@
-FROM jdk:11
+FROM openjdk:11
 VOLUME /tmp
 EXPOSE 7070
 ARG JAR_FILE=targetdemo-0.0.1-SNAPSHOT.jar
