@@ -12,6 +12,6 @@ public class DemoController {
 
 	@RequestMapping(path = "/testdemo",  method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> demoTest() {
-		return ResponseEntity.ok().body("Hello from demo!");
+		return ResponseEntity.ok().body("Hello from demo on GCP!");
 	}
 }
